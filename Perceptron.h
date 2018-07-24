@@ -6,25 +6,36 @@
 using namespace std;
 class Perceptron{
     public:
-        //TODO:
+        // TODO:
         // Maybe you can set the no-arguments constructor
         // as the sample runner.
         // Maybe with Iris dataset
         // Exclude for now
         //Perceptron();
-        //usable constructor
+        // usable constructor
         Perceptron(vector<vector<double>> data );
         //destructor
         ~Perceptron();
 
         void train();
         void test();
-        void predict(vector<vector<double>> data);
+        void predict(vector<vector<double>> *data);
+        double sigmoid(double x);
+        double sigmoid_p(double x);
+        double getWeight1(){return weight1;}
+        double getWeight2(){return weight2;}
+        double getBias(){return bias;}
+        void setBias(double x){bias=x;}
+        void setWeight1(double x){weight1=x;}
+        void setWeight2(double x){weight2=x;}
+        vector<vector<double>> data;
+        double learningRate;
 
 
     private:
-        vector<vector<double>> data;
+
         double weight1;
         double weight2;
         double bias;
+
 };
