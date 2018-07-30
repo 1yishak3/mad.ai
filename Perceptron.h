@@ -28,7 +28,8 @@ class Perceptron{
         void setBias(double x){bias=x;}
         void setWeight1(double x){weight1=x;}
         void setWeight2(double x){weight2=x;}
-        vector<vector<double>> data;
+        vector<vector<double>> train_data;
+        vector<vector<double>> test_data;
         double learningRate;
 
 
